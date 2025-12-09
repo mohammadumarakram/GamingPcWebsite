@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalize Build | TitanPcs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="contactstyles.css">
+</head>
+<body>
+
+    <nav class="navbar">
+    <div class="brand-title">
+        <img src="images/logo.png" alt="TitanPcs Logo" class="logo-img">
+        <span>TitanPcs</span>
+    </div>
+    
+    <a href="#" class="toggle-button" id="mobile-menu">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </a>
+
+    <div class="navbar-links" id="nav-links">
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="prebuilds.html">Pre-build PCs</a></li>
+            <li><a href="custom.html">Custom Build</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+    <div class="container contact-page-container">
+        <div style="text-align: center;">
+            <h1 class="page-title">Finalize Your Build</h1>
+        </div>
+
+        <div id="success-msg">Order Request Sent! We will contact you on WhatsApp shortly.</div>
+
+        <div class="split-layout">
+            
+            <div class="form-section">
+                <h2 class="section-heading">Contact Details</h2>
+                
+                <form id="orderForm">
+                    <input type="hidden" id="hidden_product_name" name="product_name">
+                    <input type="hidden" id="hidden_base_price" name="base_price">
+                    <input type="hidden" id="hidden_specs" name="specs_summary">
+
+                    <div class="form-group">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" name="customer_name" class="form-input" placeholder="John Doe" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Phone Number (WhatsApp)</label>
+                        <input type="tel" name="customer_phone" class="form-input" placeholder="+91 98765..." required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Email Address</label>
+                        <input type="email" name="customer_email" class="form-input" placeholder="john@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Customization Requests & Notes</label>
+                        <textarea name="custom_notes" class="form-textarea" rows="5" placeholder="I want to upgrade RAM to 64GB, change case color, etc."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Confirm Order Request</button>
+                </form>
+            </div>
+
+            <div class="summary-section">
+                <div id="orderCard" class="order-card">
+                    <img id="summary-img" src="" alt="Selected PC">
+                    
+                    <div class="card-info">
+                        <h3>Your Selection</h3>
+                        <h4 id="summary-title" class="product-title">Loading...</h4>
+                        
+                        <div class="summary-specs">
+                            <div class="spec-row">
+                                <i class="fas fa-microchip"></i> 
+                                <span id="summary-cpu">CPU Info</span>
+                            </div>
+                            <div class="spec-row">
+                                <i class="fas fa-memory"></i> 
+                                <span id="summary-ram">RAM Info</span>
+                            </div>
+                            <div class="spec-row">
+                                <i class="fas fa-gamepad"></i> 
+                                <span id="summary-gpu">GPU Info</span>
+                            </div>
+                        </div>
+
+                        <div id="summary-price" class="summary-price">Rs 0</div>
+                        <p class="disclaimer">*Final price may vary based on customization.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
