@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Titan PCs</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* --- General Reset & Fonts --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* --- Utility Classes --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .text-orange {
+            color: #e95d2a; /* Keeping the dynamic orange accent */
+        }
+
+        .text-black {
+            color: #000;
+        }
+
+        /* --- About Section (Light Background) --- */
+        .about-section {
+            background-color: #fff;
+            padding: 60px 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            font-weight: 800;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        .about-content {
+            margin-bottom: 50px;
+        }
+
+        .about-content p {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 1rem;
+            max-width: 900px;
+        }
+
+        /* --- Map Section --- */
+        .map-wrapper {
+            width: 100%;
+            margin-top: 30px;
+            margin-bottom: 60px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        iframe {
+            width: 100%;
+            display: block;
+        }
+
+        /* --- Footer Section (Dark Background) --- */
+        footer {
+            background-color: #1a1a1a; /* Dark grey/black */
+            color: #fff;
+            padding-top: 60px;
+            border-top: 4px solid #e95d2a; /* Top accent border */
+        }
+
+        /* Newsletter Row */
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #333;
+            margin-bottom: 40px;
+        }
+
+        .phone-contact {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .phone-number {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #e95d2a;
+        }
+
+        .newsletter h3 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .newsletter p {
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        .subscribe-form {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .subscribe-form input {
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 250px;
+        }
+
+        .subscribe-btn {
+            background-color: #fff;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .subscribe-btn:hover {
+            background-color: #e95d2a;
+            color: #fff;
+        }
+
+        /* Footer Links Grid */
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            padding-bottom: 60px;
+        }
+
+        .footer-col h4 {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #999;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .footer-col ul li a:hover {
+            color: #e95d2a;
+        }
+
+        .contact-highlight {
+            color: #e95d2a;
+            font-weight: bold;
+            display: block;
+            margin-top: 5px;
+            font-size: 1.1rem;
+        }
+
+        .footer-address {
+            color: #999;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .email-link {
+            color: #e95d2a;
+            text-decoration: none;
+        }
+
+        /* Responsive Tweaks */
+        @media (max-width: 768px) {
+            .footer-top {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+            }
+            .subscribe-form input {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+    <div class="brand-title">
+        <img src="images/logo.png" alt="TitanPcs Logo" class="logo-img">
+        <span>TitanPcs</span>
+    </div>
+    
+    <a href="#" class="toggle-button" id="mobile-menu">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </a>
+
+    <div class="navbar-links" id="nav-links">
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="prebuilds.html">Pre-build PCs</a></li>
+            <li><a href="custom.html">Custom Build</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+
+    <section class="about-section">
+        <div class="container">
+            
+            <div class="about-content">
+                <h1 class="section-title">
+                    <span class="text-orange">WELCOME TO</span> <span class="text-black">TITAN PCS</span>
+                </h1>
+                <p>
+                    At Titan PCs, we’re not just assembling hardware—we’re forging the ultimate gaming arsenals. Designed to empower e-sports athletes, creators, and streamers, our machines are built to dominate. Based in the heart of Delhi, India, we have dedicated ourselves to mastering the craft of custom and prebuilt performance rigs. We combine raw power with sleek, industrial aesthetics to ensure your setup looks as dangerous as it performs.
+                </p>
+            </div>
+
+            <div class="about-content">
+                <h1 class="section-title">
+                    <span class="text-orange">WHO</span> <span class="text-black">WE ARE</span>
+                </h1>
+                <p>
+                    We are a legion of hardware enthusiasts obsessed with framerates, thermals, and cable management. From AAA gaming beasts to silent workstation powerhouses, Titan PCs builds rigs tailored to your specific battlefield. Our mission is absolute: to provide robust, zero-compromise computing solutions that elevate your potential. With a community of loyal Titans and a reputation for reliability, we thrive on pushing the limits of what a PC can do.
+                </p>
+            </div>
+
+            <div class="map-wrapper">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.664402636737!2d77.2510842150808!3d28.549814082450505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3c5483017a5%3A0x773cb292672a9e8b!2sNehru%20Place%2C%20New%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1645000000000!5m2!1sen!2sin" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            
+            <div class="footer-top">
+                <div class="phone-contact">
+                    <div style="font-size: 2rem; color: #fff;">📞</div>
+                    <div>
+                        <div style="font-size: 0.9rem; color: #999;">Order And Service</div>
+                        <div class="phone-number">(+91) 98765-87361</div>
+                    </div>
+                </div>
+
+                <div class="newsletter">
+                    <h3>Join the Titan Legion</h3>
+                    <p>Get exclusive build guides and drop alerts.</p>
+                    <div class="subscribe-form">
+                        <input type="email" placeholder="Enter email address...">
+                        <button class="subscribe-btn">Subscribe ></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-grid">
+                
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul>
+                        <li>
+                            <span style="color:#666; font-size:0.9rem;">Sales Inquiry</span>
+                            <span class="contact-highlight">+91 98765-82321</span>
+                        </li>
+                        <li>
+                            <span style="color:#666; font-size:0.9rem;">Technical Support</span>
+                            <span class="contact-highlight">+91 98765-31371</span>
+                        </li>
+                        <li>
+                            <span style="color:#666; font-size:0.9rem;">WhatsApp</span>
+                            <span class="contact-highlight">+91 98765-82388</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Titan PCs</a></li>
+                        <li><a href="#">Build Showcase</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Warranty Terms</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>My Account</h4>
+                    <ul>
+                        <li><a href="#">My Rigs</a></li>
+                        <li><a href="#">Track Build Status</a></li>
+                        <li><a href="#">Wish List</a></li>
+                        <li><a href="#">Order History</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Titan HQ</h4>
+                    <p class="footer-address">
+                        Shop No. 101, Titan Tower,<br>
+                        Nehru Place, New Delhi, 110019.<br><br>
+                        <strong style="color: #fff;">Email</strong><br>
+                        <a href="mailto:support@titanpcs.in" class="email-link">support@titanpcs.in</a>
+                    </p>
+                    
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
